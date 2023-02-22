@@ -8,6 +8,21 @@
   font-style: normal;
   font-display: block;
 }
+[class*=_icon-]:before {
+  font-family: "icomoon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class*=_icon-]:before {
+  display: block;
+}
+
 [class^=icon-]::before,
 [class*=" icon-"]::before {
   /* use !important to prevent issues with browser extensions that change fonts */
@@ -323,6 +338,12 @@ h6 {
   letter-spacing: 2px;
   border: 2px solid #ED017F;
 }
+@media (any-hover: hover) {
+  .button:hover {
+    background: #FFFFFF;
+    color: #ED017F;
+  }
+}
 .button._fw {
   width: 100%;
 }
@@ -332,6 +353,12 @@ h6 {
   border: 2px solid #ED017F;
   border-radius: 4px;
   color: #ED017F;
+}
+@media (any-hover: hover) {
+  .button_transperent {
+    color: #FFFFFF;
+    background: #ED017F;
+  }
 }
 
 [class*=-ibg] {
@@ -528,7 +555,6 @@ h6 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
   margin: 0 -40px;
 }
 
@@ -600,12 +626,12 @@ h6 {
 }
 @media (max-width: 628px) {
   .page__gradient {
-    height: 45%;
+    height: 35%;
   }
 }
 @media (max-width: 436px) {
   .page__gradient {
-    height: 35%;
+    height: 30%;
   }
 }
 
